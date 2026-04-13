@@ -1,1 +1,30 @@
-<p>navbar works!</p>
+<div class="body">
+    <p-menubar [model]="items"></p-menubar>
+    <h6 class="name">HI, I'M LOKESH</h6>
+    <p-splitter [style]="{ height: '27rem' }" class="mb-8 panel">
+        <ng-template #panel>
+            <p-card header="Simple Card">
+                <p class="card spark-text">
+                    SOFTWARE ENGINEER SPECIALIZING IN SECURE BACKEND SYSTEMS WITH JAVA, SPRING BOOT, AND MICROSERVICES,
+                    EXPERIENCED IN AUTHENTICATION, FULL STACK DEVELOPMENT, AND HIGH PERFORMANCE SCALABLE APPLICATIONS.
+                </p>
+            </p-card>
+        </ng-template>
+        <ng-template #panel>
+            <img src="assets/logobitmoji.jpg" alt="Lokesh" class="profile-img ml-8">
+        </ng-template>
+        <ng-template #panel>
+            <div class="flow-btn mt-5">
+                <p-button label="CONTACT ME" [rounded]="true" severity="success" />
+            </div>
+        </ng-template>
+    </p-splitter>
+</div>
+
+
+
+<!-- background-color: blue;
+    width: 300px;
+    font-size: 80px;
+    border-radius: 45px;
+    margin-top: 135px; -->

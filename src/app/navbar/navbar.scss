@@ -1,0 +1,125 @@
+.body {
+    margin: 0;
+    background-color: black;
+    padding-top: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+:host ::ng-deep .p-menubar {
+  border: none;
+  background: black;
+  color: white;
+}
+
+:host ::ng-deep .p-menubar-root-list {
+  display: flex;
+  gap: 8rem; /* spacing between items */
+  justify-content: center; /* center menu */
+  margin-left: 13rem;
+  margin-top: 1rem;
+}
+
+:host ::ng-deep .p-menuitem-link {
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+  
+}
+
+:host ::ng-deep .p-menuitem-link:hover {
+  color: black;
+}
+
+.name {
+    margin-top: -2.5rem;
+    font-size: clamp(3rem, 12vw, 15rem);
+    font-weight: bold;
+    background: linear-gradient(to bottom, #222, #aaa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: .01rem;
+    padding-left: 5rem;
+}
+
+.panel {
+    margin-top: -1.5rem;
+}
+
+.profile-img {
+    margin-top: -35px;
+    width: 320px;
+}
+
+.card {
+    margin-top: -0.5rem;
+    margin-left: 5rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.spark-text {
+    font-weight: 600;
+    background: linear-gradient(
+        90deg,
+        #ffffff 0%,
+        #6b7071 25%,
+        #ffffff 50%,
+        #6b7071 75%,
+        #ffffff 100%
+    );
+    background-size: 200% auto;
+    
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    animation: sparkle 3s linear infinite;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 200% center;
+    }
+    100% {
+        background-position: -200% center;
+    }
+}
+
+:host ::ng-deep .flow-btn .p-button {
+    background: linear-gradient(
+    90deg,
+    black 10%,
+    #6a0dad 50%,
+    #ff4ecb 70%,
+    #ff8c42 100%
+  );
+  transition: 0.5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color: white;
+    padding: 1.3rem 3.1rem;
+    font-size:2.3rem;
+    border: 2px solid rgb(245, 178, 245);
+    font-weight: bold;
+}
+
+@keyframes flowGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+:host ::ng-deep .flow-btn .p-button {
+  transition: transform 0.2s ease;
+}
+
+:host ::ng-deep .flow-btn .p-button:hover {
+  transform: rotate(-4deg);
+}
+
