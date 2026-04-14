@@ -9,6 +9,7 @@ import { ButtonModule } from 'primeng/button';
 @Component({
   selector: 'app-navbar',
   imports: [MenubarModule, SplitterModule, CardModule, ButtonModule],
+  imports: [MenubarModule, SplitterModule, CardModule, ButtonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
