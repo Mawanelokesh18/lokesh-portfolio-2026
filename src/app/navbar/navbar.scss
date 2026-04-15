@@ -55,7 +55,6 @@
     z-index: 1;
 }
 
-
 .card {
     color: white;
     font-size: 1.2rem;
@@ -141,7 +140,7 @@
     }
 
     :host ::ng-deep .p-splitter {
-        flex-direction: column; /* stack vertically */
+        flex-direction: column;
     }
 
     .profile-img {
@@ -149,9 +148,6 @@
     }
 }
 
-/* ========================= */
-/* 📱 SMALL MOBILE (≤480px) */
-/* ========================= */
 @media (max-width: 480px) {
 
     .name {

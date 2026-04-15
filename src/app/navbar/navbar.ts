@@ -1,19 +1,22 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 import { MenubarModule, Menubar } from 'primeng/menubar';
-import { SplitterModule, Splitter } from 'primeng/splitter';
-import { CardModule, Card } from 'primeng/card';
-import { ButtonModule, Button } from 'primeng/button';
-
+import { SplitterModule } from 'primeng/splitter';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
-  imports: [Menubar, Card, Button, Splitter],
+  imports: [Menubar, MenubarModule, CardModule, ButtonModule, SplitterModule],
 })
 export class Navbar {
- isMobile = false;
+
+  isMobile = false;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
     this.checkScreen();
@@ -21,7 +24,9 @@ export class Navbar {
 
   @HostListener('window:resize')
   checkScreen() {
-    this.isMobile = window.innerWidth < 900;
+    if (isPlatformBrowser(this.platformId)) {
+      this.isMobile = window.innerWidth < 900;
+    }
   }
 
   items = [
@@ -31,5 +36,4 @@ export class Navbar {
     { label: 'EXPERIENCE' },
     { label: 'CONTACT ME' }
   ];
-
 }
